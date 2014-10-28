@@ -14,7 +14,7 @@ drawpad = Canvas(root, width=800,height=600, background='white')
 drawpad.grid(row=0, column=0)
 
 # Create the oval
-circle = drawpad.create_oval(10, 10, 50, 50, fill='green')
+circle = drawpad.create_oval(20, 20, 100, 100, fill='green')
 direction = 1
 # Create our animation function
 def animate():
