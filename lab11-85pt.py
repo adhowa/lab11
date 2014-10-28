@@ -30,5 +30,16 @@ def animate():
     drawpad.after(1, animate)
 
 # Kick off our animation
+
+def animate():
+    global direction
+    x1, y1, x2, y2 = drawpad.coords(circle)
+    if y2 > drawpad.winfo_height():
+        direction = -1
+    elif y1 < 0:
+        direction = 1 
+    drawpad.move(circle,0,direction)
+    drawpad.after(1, animate)
 animate()
+
 root.mainloop()
